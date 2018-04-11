@@ -4,6 +4,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
   <title>Netease A1</title>
+  <!-- Function CSS -->
+  <link rel="stylesheet" href="./css/function.css"> 
   <!-- Costom CSS -->
   <link rel="stylesheet" href="./css/a1.css">
   <!-- FontAwersome -->
@@ -105,7 +107,6 @@
        <main>
 
        	<h3>日志管理</h2>
-       	 
        	 <div class="middle"> 
             <div class="tab">
   				<button class="tablinks" onclick="openTab(event, 'calendar')" id="defaultOpen">日志</button>
@@ -115,59 +116,39 @@
 
 			<div id="calendar" class="tabcontent">
 				<div class="ta-wrapper">
-  				
   				<div class="form-wrapper" style="width: 100%;">
-  					<form>
-            <input placeholder="日志标题" class="title-input">
-  					<textarea rows="6" cols="100%" placeholder="这里可以写日志哦~" id="myTextarea"></textarea>
-  					<div class="btn-wrapper">
-  						<button>发布</button>
-  					    <button type="reset" onclick="document.getElementById('myTextarea').value = ''">清空</button>
-  					</div>
-  				    </form>	
+
+  					<form id="addPost">
+              <input placeholder="日志标题" class="title-input" id="myFormTitle">
+              <textarea rows="6" cols="100%" placeholder="这里可以写日志哦~" id="myTextarea"></textarea>
+              <div class="btn-wrapper">
+                <button type="submit" value="submit">发布</button>
+                <button type="reset" onclick="document.getElementById('myTextarea').value = ''">清空</button>
+              </div>
+            </form>	
+            
   				</div>
   				</div>	
-  				
-
   				<!--sample links-->
   				<ul class="bloglist" id="bloglist">
-
-            <!--the loop part-->
-  					<!-- <li class="bloglist-item" style="display: block;">
-  						<input type="checkbox" name="checkname[]" value="1"><span>JS高性能原则（转载)</span>
-  						<div class="blog-btn-wrapper">
-  						<button>编辑</button>
-              <div class="dropdown">
-                  <button class="dropbtn">更多&nbsp;<i class="fas fa-caret-down"></i></button>
-                  <div class="dropdown-content" >
-                      <a href="#">删除</a>
-                      <a href="#">置顶</a>
-                  </div>
-              </div>
-  						</div>
-  						<div class="blog-meta-wrapper">
-  						<p>2010-06-03 13:44 &nbsp;&nbsp;&nbsp;阅读23&nbsp;&nbsp;&nbsp;评论0</p>
-  						</div>	
-  					</li> -->
-             <!--the loop part ends-->
+            <!--the contents are generated in JS file-->
           </ul>
-
-            <!--the select all section-->
+          <!--the select all section-->
           <ul class="selectAllList">  
             <li class="all-li" style="display: block;clear: both">
               <input type="checkbox" name="all" id="all" onclick="checkAll()"><span>全选</span>
               <div class="blog-btn-wrapper">
-              <button id="delete-m-btn">删除</button>
+              <button id="delete-m-btn" onclick="getCheckBox()">删除</button>
               </div>
             </li>
             <!--the select all section ends-->
   				</ul>
-            </div>
+        </div>
 
 			<div id="tag" class="tabcontent">
   				<p>没有标签，快去添加吧！</p> 
 			</div>
-       	 </div>
+    </div>
 
 
   <!-- Right Section-->
@@ -178,52 +159,54 @@
 
         <!-- blog list right-->
         <div style="width: 25%;float: right;">
-        	<h5>好友最新日志</h5>
-        	<div class="media">
-  				   <img src="./images/profile.png" width="35px">
-  				   <div class="media-body">
-    				   <h5 class="mt-0">昵称</h5>
-               <p>评论评论评论评论</p>
-             </div>
-          </div>
+          <h5>好友最新日志</h5>
+          <div id="con1">
+            <div class="media">
+              <img src="./images/profile.png" width="35px">
+              <div class="media-body">
+                <h5 class="mt-0">昵称</h5>
+                <p>评论评论评论评论</p>
+              </div>
+            </div>
 
-          <div class="media">
-             <img src="./images/profile.png" width="35px">
-             <div class="media-body">
-               <h5 class="mt-0">昵称</h5>
-               <p>评论评论评论评论</p>
-             </div>
-          </div>
+            <div class="media">
+              <img src="./images/profile.png" width="35px">
+              <div class="media-body">
+                <h5 class="mt-0">昵称</h5>
+                <p>评论评论评论评论</p>
+              </div>
+            </div>
 
-          <div class="media">
-             <img src="./images/profile.png" width="35px">
-             <div class="media-body">
-               <h5 class="mt-0">昵称</h5>
-               <p>评论评论评论评论</p>
-             </div>
-          </div>
+            <div class="media">
+              <img src="./images/profile.png" width="35px">
+              <div class="media-body">
+                <h5 class="mt-0">昵称</h5>
+                <p>评论评论评论评论</p>
+              </div>
+            </div>
 
-          <div class="media">
-             <img src="./images/profile.png" width="35px">
-             <div class="media-body">
-               <h5 class="mt-0">昵称</h5>
-               <p>评论评论评论评论</p>
-             </div>
-          </div>
+            <div class="media">
+              <img src="./images/profile.png" width="35px">
+              <div class="media-body">
+                <h5 class="mt-0">昵称</h5>
+                <p>评论评论评论评论</p>
+              </div>
+            </div>
 
-          <div class="media">
-             <img src="./images/profile.png" width="35px">
-             <div class="media-body">
-               <h5 class="mt-0">昵称</h5>
-               <p>评论评论评论评论</p>
-             </div>
+            <div class="media">
+              <img src="./images/profile.png" width="35px">
+              <div class="media-body">
+                <h5 class="mt-0">昵称</h5>
+                <p>评论评论评论评论</p>
+              </div>
+            </div>
           </div>
        	</div>
      
        </main>
   <!-- Right Section ends-->
 
-   </div>
+  </div>
 </div><!-- Blog body ends-->
 
 
@@ -245,11 +228,7 @@
    	   </div>
    </div>
 </footer>
-
-
 </body>
-
-
 
 <script type="text/javascript" src="./js/index.js"></script>
 
