@@ -16,6 +16,7 @@
         border-radius: 5px;
         box-shadow: 0 0 10px #0000ff;
         overflow: hidden;
+        padding-top: 32px;
     }
 </style>
 
@@ -50,11 +51,12 @@
         if (scrollUpBox.scrollTop >= (content.clientHeight - scrollUpBox.clientHeight)) {
             scrollUpBox.scrollTop = 0;
         } else {
-            scrollUpBox.scrollTop++;
+            scrollUpBox.scrollTop+=40;
         }
     }                
-    var TIME = 200;
+    var TIME = 2000;
     var timer = setInterval(scrollUp, TIME);
+
     scrollUpBox.onmouseover = function() {
         clearInterval(timer);
     }
