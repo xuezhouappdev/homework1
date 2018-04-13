@@ -47,24 +47,24 @@
     </div>
   </header>
 
-  <!-- Welcome Section -->
+  <!-- Welcome板块 -->
   <div class="welcome">
     <div class="container">
       <div class="img-wrapper">
         <img src="./images/profile.png">
       </div>
-      <div class="wording" style="display: inline-block;">
+      <div class="wording">
         <h4>欢迎，奔跑的熊猫</h4>
         <button class="upload-image" type="input">传相片</button>
       </div>
     </div>
   </div>
 
-  <!-- Blog body -->
+  <!-- 日志body -->
   <div class="blog-body">
     <div class="container">
-      <!-- Left Section-->
-        <nav style="float:left;width: 150px;">
+      <!-- 左侧导航-->
+        <nav>
           <div class="panel panel-default">
             <div class="panel-heading">
               <span><i class="fas fa-home"></i>&nbsp;博客动态</span>
@@ -104,143 +104,134 @@
         </nav>
 
         <main>
-
           <h3>日志管理</h2>
           <div class="middle"> 
-              <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'calendar')" id="defaultOpen">日志</button>
-            <button class="tablinks" onclick="openTab(event, 'tag')">标签</button>
-              </div>
-
-
-        <div id="calendar" class="tabcontent">
-          <div class="ta-wrapper">
-            <div class="form-wrapper" style="width: 100%;">
-
-              <form id="addPost">
-                <input placeholder="日志标题" class="title-input" id="myFormTitle">
-                <textarea rows="6" cols="100%" placeholder="这里可以写日志哦~" id="myTextarea"></textarea>
-                <div class="btn-wrapper">
-                  <button type="submit" value="submit">发布</button>
-                  <button type="reset" onclick="document.getElementById('myTextarea').value = ''">清空</button>
-                </div>
-              </form>	
-              
+            <div class="tab">
+              <button class="tablinks" onclick="openTab(event, 'calendar')" id="defaultOpen">日志</button>
+              <button class="tablinks" onclick="openTab(event, 'tag')">标签</button>
             </div>
-            </div>	
-            <!--sample links-->
-            <ul class="bloglist" id="bloglist">
-              <!--the contents are generated in JS file-->
-            </ul>
-            <!--the select all section-->
-            <ul class="selectAllList">  
-              <li class="all-li" style="display: block;clear: both">
-                <input type="checkbox" name="all" id="all" onclick="checkAll()"><span>全选</span>
-                <div class="blog-btn-wrapper">
-                <button id="delete-m-btn" onclick="getCheckBox()">删除</button>
+
+            <div id="calendar" class="tabcontent">
+              <div class="ta-wrapper">
+                <div class="form-wrapper">
+                  <form id="addPost">
+                    <input placeholder="日志标题" class="title-input" id="myFormTitle">
+                    <textarea rows="6" cols="100%" placeholder="这里可以写日志哦~" id="myTextarea"></textarea>
+                    <div class="btn-wrapper">
+                      <button type="submit" value="submit">发布</button>
+                      <button type="reset" onclick="document.getElementById('myTextarea').value = ''">清空</button>
+                    </div>
+                  </form>	 
                 </div>
-              </li>
-              <!--the select all section ends-->
-            </ul>
+              </div>	
+
+              <ul class="bloglist" id="bloglist">
+                <!--list内容由JS渲染-->
+              </ul>
+
+              <!--全选checkbox-->
+              <ul class="selectAllList">  
+                <li class="all-li">
+                  <input type="checkbox" name="all" id="all" onclick="checkAll()"><span>全选</span>
+                  <div class="blog-btn-wrapper">
+                  <button id="delete-m-btn" onclick="getCheckBox()">删除</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div id="tag" class="tabcontent">
+              <p>没有标签，快去添加吧</p> 
+            </div>
           </div>
-
-        <div id="tag" class="tabcontent">
-            <p>没有标签，快去添加吧！</p> 
-        </div>
-      </div>
-
-
-    <!-- Right Section-->
-          <!-- blog list right-->
+          <!-- 好友日志栏-->
           <div class="blog-list-right">
-            <h5>好友最新日志</h5>
-            <div id="scrollUpBox">
-              <div id="friends-post-list">
-                <div class="media">
-                <img src="./images/profile.png" width="35px">
-                <div class="media-body">
-                  <h5 class="mt-0">昵称1</h5>
-                  <p>评论评论评论评论</p>
-                </div>
-                </div>
-
-                <div class="media">
-                  <img src="./images/profile2.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称2</h5>
-                    <p>评论评论评论评论</p>
-                  </div>
-                </div>
-
-                <div class="media">
+              <h5>好友最新日志</h5>
+              <div id="scrollUpBox">
+                <div id="friends-post-list">
+                  <div class="media">
                   <img src="./images/profile.png" width="35px">
                   <div class="media-body">
-                    <h5 class="mt-0">昵称3</h5>
+                    <h5 class="mt-0">昵称1</h5>
                     <p>评论评论评论评论</p>
                   </div>
-                </div>
-
-                <div class="media">
-                  <img src="./images/profile2.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称4</h5>
-                    <p>评论评论评论评论</p>
                   </div>
-                </div>
 
-                <div class="media">
-                  <img src="./images/profile.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称5</h5>
-                    <p>评论评论评论评论</p>
-                  </div>
-                </div>
-
-                <div class="media">
-                  <img src="./images/profile2.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称6</h5>
-                    <p>评论评论评论评论</p>
-                  </div>
-                </div>
-
-                <div class="media">
-                  <img src="./images/profile.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称7</h5>
-                    <p>评论评论评论评论</p>
-                  </div>
-                </div>
-
-                <div class="media">
-                  <img src="./images/profile2.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称8</h5>
-                    <p>评论评论评论评论</p>
-                  </div>
-                </div>
-
-                <div class="media">
-                  <img src="./images/profile.png" width="35px">
-                  <div class="media-body">
-                    <h5 class="mt-0">昵称9</h5>
-                    <p>评论评论评论评论</p>
-                  </div>
-                </div>
-
-                <div class="media">
-                    <img src="./images/profile.png" width="35px">
+                  <div class="media">
+                    <img src="./images/profile2.png" width="35px">
                     <div class="media-body">
-                      <h5 class="mt-0">昵称10</h5>
+                      <h5 class="mt-0">昵称2</h5>
                       <p>评论评论评论评论</p>
                     </div>
                   </div>
-            </div>
-            </div>
-          </div>
-    </main>
-    <!-- Right Section ends-->
 
+                  <div class="media">
+                    <img src="./images/profile.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称3</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img src="./images/profile2.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称4</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img src="./images/profile.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称5</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img src="./images/profile2.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称6</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img src="./images/profile.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称7</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img src="./images/profile2.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称8</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img src="./images/profile.png" width="35px">
+                    <div class="media-body">
+                      <h5 class="mt-0">昵称9</h5>
+                      <p>评论评论评论评论</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                      <img src="./images/profile.png" width="35px">
+                      <div class="media-body">
+                        <h5 class="mt-0">昵称10</h5>
+                        <p>评论评论评论评论</p>
+                      </div>
+                    </div>
+              </div>
+              </div>
+          </div>
+        </main>
     </div>
   </div><!-- Blog body ends-->
 

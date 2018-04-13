@@ -14,8 +14,6 @@ body,html {
 	padding:0.5rem 4rem;
 }
 
-
-
 .header-left {
 	float:left;
 	width: 400px;
@@ -27,7 +25,6 @@ body,html {
 	margin-right: 0.8rem;
 	text-decoration: none;
 }
-
 
 header .dropbtn {
     border: none;
@@ -75,11 +72,9 @@ header .dropdown-content a:hover {
     cursor: pointer;
 }
 
-
 header .dropdown-content a:nth-child(9){
     border-bottom: 1px solid #efe9e9;
 }
-
 
 .header-right{
 	float:right;
@@ -97,6 +92,9 @@ header .dropdown-content a:nth-child(9){
     display: inline-block;
 }
 
+.welcome .wording {
+    display: inline-block;
+}
 
 .welcome .wording h4{
 	margin-top: 0;
@@ -143,6 +141,10 @@ header .dropdown-content a:nth-child(9){
 	background: #e2e2e2;
 }
 
+nav {
+    float:left;
+    width: 150px;
+}
 
 main{
 	float: right;
@@ -156,7 +158,6 @@ main{
 
 main h3 {
 	margin: .4rem 1rem;
-
 }
 
 main .panel-body .wording p {
@@ -165,6 +166,9 @@ main .panel-body .wording p {
 	padding-left: 20px;
 }
 
+main div.form-wrapper {
+    width: 100%;
+}
 
 .middle .nav-tabs {
     border-bottom: 1px solid #ddd;
@@ -228,9 +232,6 @@ main .panel-body .wording p {
 	font-size:12px;
 	color: #999999;
 }
-
-
-
 /*Tab style*/
 /* Style the tab */
 .middle .tab {
@@ -329,6 +330,11 @@ main .panel-body .wording p {
     cursor: pointer;
 }
 
+.middle .selectAllList li {
+    display: block;
+    clear: both
+}
+
 .middle .bloglist .blog-btn-wrapper .dropbtn {
     border: none;
     cursor: pointer;
@@ -389,9 +395,6 @@ main .panel-body .wording p {
 	margin-left: .5rem;
 	font-size:14px;
 }
-
-
-
 
 /*Footer*/
 footer .footer-fl, footer .footer-sl {
