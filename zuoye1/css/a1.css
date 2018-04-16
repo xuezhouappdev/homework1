@@ -177,7 +177,6 @@ main div.form-wrapper {
  .middle .nav-tabs>li {
     float: left;
     margin-right: 10px;
-
 }
 
  .middle .nav-tabs li a {
@@ -193,6 +192,7 @@ main div.form-wrapper {
     width: 25%;
     float: right;
 }
+
 #scrollUpBox{
     height: 200px;
     padding: 0 15px;
@@ -232,6 +232,7 @@ main div.form-wrapper {
 	font-size:12px;
 	color: #999999;
 }
+
 /*Tab style*/
 /* Style the tab */
 .middle .tab {
@@ -254,13 +255,11 @@ main div.form-wrapper {
     border-bottom: none;
 }
 
-/* Change background color of buttons on hover */
 .middle .tab button:hover {
     background-color: #ddd;
     cursor: pointer;
 }
 
-/* Create an active/current tablink class */
 .middle .tab button.active {
     border-bottom: none;
     background: #c8c6c6;
@@ -306,12 +305,12 @@ main div.form-wrapper {
 
 .middle .bloglist .blog-btn-wrapper{
 	display: inline-block;
-	float:right;
+	float: right;
 }
 
 .middle .selectAllList .blog-btn-wrapper{
     display: inline-block;
-    float:right;
+    float: right;
 }
 
 .middle .bloglist .blog-btn-wrapper button {
