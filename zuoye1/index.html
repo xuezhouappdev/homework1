@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Netease前端新人大作业</title>
+  </head>
+  <body><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
   <title>Netease A1</title>
   <!-- Function CSS -->
@@ -11,7 +15,6 @@
   <!-- FontAwersome -->
   <script src="./js/fontawersome.js" ></script>
 </head>
-
 <body>
   <!-- Header -->
   <header class="header">
@@ -19,7 +22,7 @@
       <section class="header-left">
         <div class="dropdown-header">
           <a href="#" class="dropbtn" id="dropbtn-id">网易&nbsp;<i class="fas fa-caret-up"></i></a>
-          <div class="dropdown-content" >
+          <div class="dropdown-content">
               <a href="#">新闻</a>
               <a href="#">微博</a>
               <a href="#">邮箱</a>
@@ -35,15 +38,14 @@
         <a href="#">博客</a>
         <a href="#">摄影</a>
         <a href="#">随便看看</a>
-        
-        </section>
-        <section class="header-right">
+      </section>
+      <section class="header-right">
         <a href="#">中午好，奔跑的熊猫(<i class="fas fa-envelope"></i>&nbsp;5)</a>
         <a href="#"><i class="fas fa-home"></i>个人中心</a>
         <a href="#">消息(1274)</a>
         <a href="#">反馈</a>
         <a href="#">退出</a>
-        </section>
+      </section>
     </div>
   </header>
 
@@ -63,8 +65,7 @@
   <!-- 日志body -->
   <div class="blog-body">
     <div class="container">
-      <!-- 左侧导航-->
-        <nav>
+        <nav><!-- 左侧导航-->
           <div class="panel panel-default">
             <div class="panel-heading">
               <span><i class="fas fa-home"></i>&nbsp;博客动态</span>
@@ -102,15 +103,14 @@
             </div>
           </div>
         </nav>
-
         <main>
           <h3>日志管理</h2>
           <div class="middle"> 
             <div class="tab">
-              <button class="tablinks" onclick="openTab(event, 'calendar')" id="defaultOpen">日志</button>
-              <button class="tablinks" onclick="openTab(event, 'tag')">标签</button>
+              <button class="tablinks" onclick="util.openTab(event, 'calendar')" id="defaultOpen">日志</button>
+              <button class="tablinks" onclick="util.openTab(event, 'tag')">标签</button>
             </div>
-
+            <!-- 日志板块 -->
             <div id="calendar" class="tabcontent">
               <div class="ta-wrapper">
                 <div class="form-wrapper">
@@ -132,102 +132,103 @@
               <!--全选checkbox-->
               <ul class="selectAllList">  
                 <li class="all-li">
-                  <input type="checkbox" name="all" id="all" onclick="checkAll()"><span>全选</span>
+                  <input type="checkbox" name="all" id="all" onclick="util.checkAll()"><span>全选</span>
                   <div class="blog-btn-wrapper">
                   <button id="delete-m-btn" onclick="getCheckBox()">删除</button>
                   </div>
                 </li>
               </ul>
             </div>
-
+            <!-- 标签板块 -->
             <div id="tag" class="tabcontent">
               <p>没有标签，快去添加吧</p> 
             </div>
           </div>
+
           <!-- 好友日志栏-->
           <div class="blog-list-right">
-              <h5>好友最新日志</h5>
-              <div id="scrollUpBox">
-                <div id="friends-post-list">
-                  <div class="media">
+            <h5>好友最新日志</h5>
+            <div id="scrollUpBox">
+              <div id="friends-post-list">
+                <div class="media">
                   <img src="./images/profile.png" width="35px">
                   <div class="media-body">
                     <h5 class="mt-0">昵称1</h5>
                     <p>评论评论评论评论</p>
                   </div>
-                  </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile2.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称2</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile2.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称2</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称3</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称3</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile2.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称4</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile2.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称4</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称5</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称5</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile2.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称6</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile2.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称6</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称7</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称7</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile2.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称8</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile2.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称8</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                    <img src="./images/profile.png" width="35px">
-                    <div class="media-body">
-                      <h5 class="mt-0">昵称9</h5>
-                      <p>评论评论评论评论</p>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称9</h5>
+                    <p>评论评论评论评论</p>
                   </div>
+                </div>
 
-                  <div class="media">
-                      <img src="./images/profile.png" width="35px">
-                      <div class="media-body">
-                        <h5 class="mt-0">昵称10</h5>
-                        <p>评论评论评论评论</p>
-                      </div>
-                    </div>
+                <div class="media">
+                  <img src="./images/profile.png" width="35px">
+                  <div class="media-body">
+                    <h5 class="mt-0">昵称10</h5>
+                    <p>评论评论评论评论</p>
+                  </div>
+                </div>
               </div>
               </div>
           </div>
@@ -258,4 +259,24 @@
 <script type ="text/javascript" src="./js/list-carousel.js"></script> 
 <script type ="text/javascript" src="./js/util.js"></script>
 <script type="text/javascript" src="./js/index.js"></script>
+
+<script type="text/javascript">
+/**
+ * @description 页面第一次加载时执行ajax, 并将tab显示为默认板块。
+ */
+ window.onload = () => {
+  util.ajax.get('http://localhost:8002/api/getBlogs', (arr) => {
+    returnedArray = arr;
+    console.log(returnedArray,'original?');
+    console.log(arr, 'from ajax');
+    util.arrayOrganize(arr,'modifyTime');
+    console.log(arr, 'from ajax2');
+    document.getElementById('bloglist').innerHTML = util.renderList(util.arrayOrganize(arr));
+  });
+
+  document.getElementById('defaultOpen').click();
+  document.getElementById('addPost').addEventListener('submit', addPost);
+};
+
+</script>
 </html>

@@ -67,7 +67,7 @@ header .dropdown-content a {
 }
 
 header .dropdown-content a:hover {
-	background-color: #939393;
+    background-color: #939393;
 	color: white;
     cursor: pointer;
 }
