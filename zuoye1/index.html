@@ -230,7 +230,7 @@
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
           </div>
         </main>
     </div>
@@ -267,11 +267,8 @@
  window.onload = () => {
   util.ajax.get('http://localhost:8002/api/getBlogs', (arr) => {
     returnedArray = arr;
-    console.log(returnedArray,'original?');
-    console.log(arr, 'from ajax');
     util.arrayOrganize(arr,'modifyTime');
-    console.log(arr, 'from ajax2');
-    document.getElementById('bloglist').innerHTML = util.renderList(util.arrayOrganize(arr));
+    document.getElementById('bloglist').innerHTML = renderList(util.arrayOrganize(arr));
   });
 
   document.getElementById('defaultOpen').click();

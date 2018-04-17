@@ -184,35 +184,6 @@ const util = {
     }
     return arr;
   },
-
-  /**
-   * @description 将数组渲染成list形式
-   * @param {array} arr - 需要渲染的排序后的数组
-   * @returns - 返回的html
-   */
-  renderList: (arr) => {
-    let returnehtml = '';
-    if (!arr) {
-      return '<li><p>当前没有日志</p></li>';
-    }
-    for (let i = 0; i < arr.length; i += 1) {
-      returnehtml += '<li class="bloglist-item" style="display: block;">';
-      returnehtml += '<input type="checkbox" name="checkname[]" value="' + i + '" id="' + arr[i].id + '"><span><i class="fas fa-user private" color="#C50A3C" style="display:' + ((arr[i]['allowView '] === -100) ? 'inline-block' : 'none') + '"></i>&nbsp;' + arr[i].title + ((arr[i].rank === 5) ? '<span style="color:#C50A3C;font-weight:bold">[置顶]</span>' : '') + '</span>';
-      returnehtml += '<div class="blog-btn-wrapper">';
-      returnehtml += '<button onclick="editPost(' + i + ')">编辑</button>';
-      returnehtml += '<div class="dropdown">';
-      returnehtml += '<button class="dropbtn">更多&nbsp;<i class="fas fa-caret-down"></i></button>';
-      returnehtml += '<div class="dropdown-content" >';
-      returnehtml += '<a onclick=deletePost(' + i + ')>删除</a>';
-      returnehtml += '<a class="up-btn" id="' + i + '" onclick="uppost(' + i + ')">置顶</a>'; 
-      returnehtml += '</div></div></div>';
-      returnehtml += '<div class="blog-meta-wrapper">';
-      returnehtml += '<p>' + util.formatDate(arr[i].modifyTime) + '&nbsp;&nbsp;&nbsp;阅读' + arr[i].accessCount + '&nbsp;&nbsp;&nbsp;评论' + arr[i].commentCount + '</p>';
-      returnehtml += '</div>';
-      returnehtml += '</li>';
-    } 
-    return returnehtml;
-  },
   updateIndex: -1,
   returnedArray: [],
 };
